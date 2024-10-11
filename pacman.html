@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman</title>
+</head>
+
+<body style="margin-left: 30%; background-color: black;">
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <div style="display:none;">
+
+        <img id="animation" src="animations.gif" width="140" height="20">
+        <img id="ghosts" src="ghost.png" width="140" height="20">
+
+    </div>
+
+    <div id="modal-final-winner" class="modal-final-winner">
+        <img src="you win.webp" alt="">
+         <!-- Botão Pac-Man -->
+     <button class="retro-btn" onclick=" location.reload()"> RESTART</button>
+
+    
+    </div> 
+
+    <div id="modal-final-loser" class="modal-final-loser">
+        <img src="gamerover.png" alt="">
+         <!-- Botão Pac-Man -->
+     <button class="retro-btn" onclick=" location.reload()"> RESTART</button>
+
+    
+    </div> 
+
+    <script src="ghost.js"></script>
+    <script src="pacman.js"></script>
+    <script src="game.js"></script>
+    <style>
+
+         .modal-final-winner{
+            flex-direction:column;
+            width:425px;
+            display: none; 
+            height: 500px; 
+            background-color: black; 
+            position: absolute; 
+            top:0%; 
+            align-items: center; 
+            justify-content: center;
+        }
+
+        .modal-final-loser{
+            flex-direction:column;
+            width:425px;
+            display: none; 
+            height: 500px; 
+            background-color: black; 
+            position: absolute; 
+            top:0%; 
+            align-items: center; 
+            justify-content: center;
+        }
+
+        .retro-btn {
+            background-color: #efa60a;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 16px;
+            border: 4px solid #000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            box-shadow: 0 4px #000;
+            transition: all 0.1s ease;
+            position: relative;
+            border-radius: 0;
+            font-family: 'Press Start 2P', cursive;
+        }
+        .retro-btn:hover {
+            background-color:  #a06f06;
+            box-shadow: none;
+            transform: translateY(4px);
+        }
+    
+    </style>
+</body>
+
+</html>
+<!-- "para iniciar o jogo clicar alt + b " -->

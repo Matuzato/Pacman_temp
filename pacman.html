@@ -8,7 +8,7 @@
     <title>Pacman</title>
 </head>
 
-<body style="margin-left: 30%; background-color: black;">
+<body>
     <canvas id="canvas" width="500" height="500"></canvas>
 
     <div style="display:none;">
@@ -38,12 +38,19 @@
     <script src="pacman.js"></script>
     <script src="game.js"></script>
     <style>
-
-         .modal-final-winner{
+        body {
+            padding-top: 10%;
+            transform: scale(1.5); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background-color: black;
+        }
+        .modal-final-winner{
             flex-direction:column;
-            width:425px;
+            width:550px;
             display: none; 
-            height: 500px; 
+            height: 800px; 
             background-color: black; 
             position: absolute; 
             top:0%; 
@@ -53,9 +60,9 @@
 
         .modal-final-loser{
             flex-direction:column;
-            width:425px;
+            width:550px;
             display: none; 
-            height: 500px; 
+            height: 800px; 
             background-color: black; 
             position: absolute; 
             top:0%; 

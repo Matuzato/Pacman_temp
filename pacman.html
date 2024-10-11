@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <title>Pacman</title>
 </head>
 
-<body>
+<body style="display: flex; justify-content: center; align-items: center; background-color: black;">
     <canvas id="canvas" width="500" height="500"></canvas>
 
     <div style="display:none;">
@@ -38,19 +38,15 @@
     <script src="pacman.js"></script>
     <script src="game.js"></script>
     <style>
-        body {
-            padding-top: 10%;
-            transform: scale(1.5); 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            background-color: black;
+         body {
+            margin-top: 10%;
+            transform: scale(1.5); /* Define o nível de zoom */
         }
         .modal-final-winner{
             flex-direction:column;
-            width:550px;
+            width:500px;
             display: none; 
-            height: 800px; 
+            height: 500px; 
             background-color: black; 
             position: absolute; 
             top:0%; 
@@ -60,9 +56,9 @@
 
         .modal-final-loser{
             flex-direction:column;
-            width:550px;
+            width:500px;
             display: none; 
-            height: 800px; 
+            height: 500px; 
             background-color: black; 
             position: absolute; 
             top:0%; 

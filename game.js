@@ -257,9 +257,8 @@ let verifyWinner = () =>{
 }
 
 createNewPacman();
-createGhosts();
-gameLoop();
-
+createGhosts(); "Comentar a linha 260 para retirar os fantamas do mapa do jogo botão para fazer comentarios Ctrl + :" 
+// audio.fundo.play();
 window.addEventListener("keydown", (event) => {
     let k = event.keyCode;
     setTimeout(() => {

@@ -2,6 +2,8 @@ const canvas = document.getElementById("canvas");
 const canvasContext = canvas.getContext("2d");
 const pacmanFrames = document.getElementById("animation");
 const ghostFrames = document.getElementById("ghosts");
+var eatmusic = document.getElementById("eat-music");
+var diemusic = document.getElementById("pacman-die");
 
 let createRect = (x, y, width, height, color) => {
     canvasContext.fillStyle = color;
@@ -84,6 +86,7 @@ let createNewPacman = () => {
 };
 
 let gameLoop = () => {
+  
     update();
     draw();
 };
@@ -113,12 +116,18 @@ let onGhostCollision = () => {
         modalFinalLoser.style.display="flex";
         lives = 3;
         score = 0;
+        diemusic.play()
+        setTimeout(() => {
+            diemusic.pause()
+        }, 1000);
     }
 };
 
 let update = () => {
     pacman.moveProcess();
     pacman.eat();
+    // eatmusic.play()
+   
     updateGhosts();
     if (pacman.checkGhostCollision(ghosts)) {
         onGhostCollision();
@@ -258,7 +267,8 @@ let verifyWinner = () =>{
 
 createNewPacman();
 createGhosts(); "Comentar a linha 260 para retirar os fantamas do mapa do jogo botão para fazer comentarios Ctrl + :" 
-// audio.fundo.play();
+
+
 window.addEventListener("keydown", (event) => {
     let k = event.keyCode;
     setTimeout(() => {

@@ -1,5 +1,7 @@
+
 class Pacman {
     constructor(x, y, width, height, speed) {
+        
         this.x = x;
         this.y = y;
         this.width = width;
@@ -24,6 +26,7 @@ class Pacman {
     }
 
     eat() {
+        
         for (let i = 0; i < map.length; i++) {
             for (let j = 0; j < map[0].length; j++) {
                 if (
@@ -32,7 +35,8 @@ class Pacman {
                     this.getMapY() == i
                 ) {
                     map[i][j] = 3;
-                    score++;
+                    score++; 
+                   
                 }
             }
         }

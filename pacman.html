@@ -32,27 +32,22 @@
      <button class="retro-btn" onclick=" location.reload()"> RESTART</button>
 
     
-    </div> 
+    </div>
+    
+    <audio id="eat-music" mute loop>
+        <source src="eat.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="pacman-die" mute loop>
+        <source src="pacman-die.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="ghost.js"></script>
     <script src="pacman.js"></script>
     <script src="game.js"></script>
-    <!-- <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
-    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    ></script> 
-    
-    <script src="audio.js"></script>
-    <script>
-        function tocarMusica() {
-          audio.fundo.play()
-        }
-        tocarMusica()
-      </script> -->
     <style>
          body {
+            overflow: hidden;
             margin-top: 10%;
             transform: scale(1.5); /* Define o nível de zoom */
         }
